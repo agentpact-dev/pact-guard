@@ -21,8 +21,10 @@
   "scripts": {
     "build": "tsup src/index.ts --format esm,cjs --dts --clean",
     "dev": "tsup src/index.ts --format esm,cjs --dts --watch",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "pnpm build"
   },
+  "homepage": "https://github.com/agentpact-dev/pact-guard/tree/main/packages/sdk",
   "devDependencies": {
     "tsup": "^8.3.5",
     "typescript": "^5.7.2"
