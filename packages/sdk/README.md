@@ -1,14 +1,14 @@
-# @agentpact/sdk
+# @agentpact-dev/sdk
 
 TypeScript SDK for [AgentPact](https://agentpact.dev) - financial guardrails
 for AI agents on Robinhood Chain.
 
 ```bash
-npm install @agentpact/sdk
+npm install @agentpact-dev/sdk
 ```
 
 ```ts
-import { AgentPact } from "@agentpact/sdk";
+import { AgentPact } from "@agentpact-dev/sdk";
 
 const pact = new AgentPact({
   agentId: "research-agent",

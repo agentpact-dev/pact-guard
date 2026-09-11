@@ -1,5 +1,5 @@
 {
-  "name": "@agentpact/sdk",
+  "name": "@agentpact-dev/sdk",
   "version": "0.1.0",
   "description": "TypeScript SDK for AgentPact - financial guardrails for AI agents on Robinhood Chain.",
   "license": "MIT",

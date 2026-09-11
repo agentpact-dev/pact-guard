@@ -11,7 +11,7 @@ AgentPact: through the hosted MCP server, not the dashboard.
 ```
 packages/
   mcp/    Remote MCP server (Cloudflare Workers) - the MCP site
-  sdk/    @agentpact/sdk - TypeScript SDK, published to npm
+  sdk/    @agentpact-dev/sdk - TypeScript SDK, published to npm
 ```
 
 Neither package holds policy logic. Both are thin clients over the
@@ -33,8 +33,8 @@ API (`pact-api`, from the private `pact-app` repo). Defaults to
 ## Publishing the SDK
 
 ```bash
-pnpm --filter @agentpact/sdk build
-pnpm --filter @agentpact/sdk publish
+pnpm --filter @agentpact-dev/sdk build
+pnpm --filter @agentpact-dev/sdk publish
 ```
 
 ## License
