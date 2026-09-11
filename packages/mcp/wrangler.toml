@@ -1,0 +1,24 @@
+name = "pact-mcp"
+main = "src/index.ts"
+compatibility_date = "2025-09-01"
+compatibility_flags = ["nodejs_compat"]
+
+[vars]
+PACT_API_URL = "http://localhost:8787/api/v1"
+
+[durable_objects]
+bindings = [
+  { name = "MCP_OBJECT", class_name = "PactMcp" }
+]
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["PactMcp"]
+
+[observability]
+enabled = true
+
+[env.production]
+name = "pact-mcp"
+[env.production.vars]
+PACT_API_URL = "https://pact-api.agentpact.workers.dev/api/v1"
