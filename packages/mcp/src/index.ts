@@ -3,7 +3,7 @@ import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { registerPactTools } from "./tools";
 
 export interface Env {
-  /** apps/api's deployed URL, e.g. https://pact-api.<account>.workers.dev/api/v1 */
+  /** apps/api's deployed URL, https://api.agentpact.dev/api/v1 in production. */
   PACT_API_URL: string;
 }
 

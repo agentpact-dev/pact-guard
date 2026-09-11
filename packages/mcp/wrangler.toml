@@ -2,9 +2,15 @@ name = "pact-mcp"
 main = "src/index.ts"
 compatibility_date = "2025-09-01"
 compatibility_flags = ["nodejs_compat"]
+account_id = "1a2886a2f3c86b247da597816f1d2435"
 
+routes = [
+  { pattern = "mcp.agentpact.dev", custom_domain = true }
+]
+
+# Overridden for local dev via .dev.vars (gitignored) - see .dev.vars.example
 [vars]
-PACT_API_URL = "http://localhost:8787/api/v1"
+PACT_API_URL = "https://api.agentpact.dev/api/v1"
 
 [durable_objects]
 bindings = [
@@ -17,8 +23,3 @@ new_sqlite_classes = ["PactMcp"]
 
 [observability]
 enabled = true
-
-[env.production]
-name = "pact-mcp"
-[env.production.vars]
-PACT_API_URL = "https://pact-api.agentpact.workers.dev/api/v1"
