@@ -1,7 +1,7 @@
 {
   "name": "@agentpact-dev/sdk",
-  "version": "0.1.0",
-  "description": "TypeScript SDK for AgentPact - financial guardrails for AI agents on Robinhood Chain.",
+  "version": "0.2.0",
+  "description": "TypeScript SDK for AgentPact - spending guardrails for AI agents.",
   "license": "MIT",
   "type": "module",
   "main": "./dist/index.cjs",

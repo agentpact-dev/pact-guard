@@ -1,7 +1,7 @@
 # pact-guard
 
-The public surface of [AgentPact](https://agentpact.dev) - financial
-guardrails for AI agents on Robinhood Chain.
+The public surface of [AgentPact](https://agentpact.dev) - spending
+guardrails for AI agents.
 
 > Every agent gets a Pact. Every financial action must obey it.
 
@@ -21,8 +21,31 @@ the full picture of how a decision is made.
 
 ## Live
 
-https://mcp.agentpact.dev - the deployed MCP server, pointed at the
+https://mcp.agentpact.dev/mcp - the deployed MCP server, pointed at the
 production API (`api.agentpact.dev`, from the private `pact-app` repo).
+
+Connect with the agent's session key in the `Authorization: Bearer` header
+(or `?key=` on the URL for clients without header support). The key is
+issued by the agent's owner in the dashboard. For a throwaway sandbox key:
+`POST https://api.agentpact.dev/api/v1/demo/session`.
+
+```json
+{
+  "mcpServers": {
+    "agentpact": {
+      "type": "http",
+      "url": "https://mcp.agentpact.dev/mcp",
+      "headers": { "Authorization": "Bearer pact_sk_..." }
+    }
+  }
+}
+```
+
+End-to-end check against a local API + MCP (`wrangler dev` on 8787 / 8788):
+
+```bash
+node packages/mcp/scripts/e2e.mjs http://localhost:8787 http://localhost:8788
+```
 
 ## Development
 
